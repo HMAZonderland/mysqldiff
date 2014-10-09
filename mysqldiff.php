@@ -511,6 +511,11 @@ function error($msg) {
     exit(1);
 }
 
+function success($msg) {
+    fputs(STDOUT, "mysqldiff: $msg\n");
+    exit;
+}
+
 function prompt($msg) {
     echo $msg;
     return trim(fgets(STDIN));
@@ -665,4 +670,4 @@ drop_schema_db($db1);
 drop_schema_db($db2);
 
 // should be successfull
-error('Success');
+success('Success');
