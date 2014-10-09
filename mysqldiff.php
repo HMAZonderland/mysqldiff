@@ -663,3 +663,6 @@ process_tables($db1, $db2);
 
 drop_schema_db($db1);
 drop_schema_db($db2);
+
+// should be successfull
+error('Success');
