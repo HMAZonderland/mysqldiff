@@ -534,7 +534,7 @@ $options = (object)array(
     'ofh' => STDOUT, // output file handle
 );
 
-date_default_timezone_set('Europe/Zurich');
+date_default_timezone_set('Europe/Amsterdam');
 $db1 = &$options->db1;
 $db2 = &$options->db2;
 
@@ -663,4 +663,3 @@ process_tables($db1, $db2);
 
 drop_schema_db($db1);
 drop_schema_db($db2);
-?>
