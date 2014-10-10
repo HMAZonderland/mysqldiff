@@ -163,11 +163,11 @@ if ($options->output_file) {
 
 $db1->link = @mysql_connect($db1->host, $db1->user, $db1->pwd, TRUE) or $mysqldiff->error(mysql_error());
 $mysqldiff->create_schema_db($db1);
-$mysqldiff->mysql_selectdb($db1->database, $db1->link) or $mysqldiff->error(mysql_error($db1->link));
+mysql_selectdb($db1->database, $db1->link) or $mysqldiff->error(mysql_error($db1->link));
 
 $db2->link = @mysql_connect($db2->host, $db2->user, $db2->pwd, TRUE) or $mysqldiff->error(mysql_error());
 $mysqldiff->create_schema_db($db2);
-$mysqldiff->mysql_selectdb($db2->database, $db2->link) or $mysqldiff->error(mysql_error($db2->link));
+mysql_selectdb($db2->database, $db2->link) or $mysqldiff->error(mysql_error($db2->link));
 
 $mysqldiff->load_schema_db($db1);
 $mysqldiff->load_schema_db($db2);
