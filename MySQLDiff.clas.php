@@ -769,18 +769,34 @@ MSG;
         }
     }
 
+    /**
+     * displays an error message
+     *
+     * @param $msg
+     */
     public function error($msg)
     {
         fputs(STDERR, "mysqldiff: $msg\n");
         exit(1);
     }
 
+    /**
+     * displays a success message
+     *
+     * @param $msg
+     */
     public function success($msg)
     {
         fputs(STDOUT, "mysqldiff: $msg\n");
         exit;
     }
 
+    /**
+     * prompts for input
+     *
+     * @param $msg
+     * @return string
+     */
     public function prompt($msg)
     {
         echo $msg;

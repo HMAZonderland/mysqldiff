@@ -182,7 +182,10 @@ $mysqldiff->drop_schema_db($db1);
 $mysqldiff->drop_schema_db($db2);
 
 // all should have been created now
-if (file_get_contents($options->output_file) == '')
-
-// should be successfull
-$mysqldiff->success('Success');
+if (file_get_contents($options->output_file) != '') {
+    // should be successfull
+    $mysqldiff->success('wrote data');
+} else {
+    unlink($options->output_file);
+    $mysqldiff->success('no diff');
+}
