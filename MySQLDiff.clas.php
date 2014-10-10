@@ -628,9 +628,9 @@ class Wiq_MySQLDiff
     {
         $sql = '';
 
-        if (!$db2->schema) {
+        /*if (!$db2->schema) {
             $sql .= "USE `$db2->database`;\n";
-        }
+        }*/
 
         if ($db1->charset != $db2->charset) {
             $sql .= "ALTER DATABASE `$db2->database` CHARACTER SET=$db1->charset;\n";
