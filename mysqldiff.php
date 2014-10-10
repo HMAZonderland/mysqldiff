@@ -46,8 +46,9 @@ date_default_timezone_set('Europe/Amsterdam');
 $db1 = &$options->db1;
 $db2 = &$options->db2;
 
-if ($argc == 1)
-    usage();
+if ($argc == 1) {
+    $mysqldiff->usage();
+}
 
 // Parse command line arguments.
 for ($i = 1; $i < $argc; $i++) {
