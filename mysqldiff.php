@@ -1,5 +1,4 @@
 <?php
-
 /**
  * mysqldiff
  *
@@ -21,6 +20,7 @@
  *
  * https://github.com/caviola/mysqldiff
  */
+
 include 'MySQLDiff.clas.php';
 $mysqldiff = new Wiq_MySQLDiff();
 
