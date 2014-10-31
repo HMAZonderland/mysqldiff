@@ -21,7 +21,7 @@
  * https://github.com/caviola/mysqldiff
  */
 
-include 'MySQLDiff.clas.php';
+include 'MySQLDiff.class.php';
 $mysqldiff = new Wiq_MySQLDiff();
 
 $options = (object)array(
